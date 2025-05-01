@@ -1,0 +1,54 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"tidytuesday\"\n",
+        "---\n",
+        "\n",
+        "\n",
+        "## 2025-04-29\n"
+      ],
+      "id": "37d6b32a"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import polars as pl\n",
+        "\n",
+        "lf = pl.scan_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-04-29/user2025.csv')"
+      ],
+      "id": "d6deea78",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# lf.collect_schema()\n",
+        "# lf.collect().glimpse()\n",
+        "# lf.collect().head()\n",
+        "\n",
+        "# use pypath thing\n",
+        "lf.sink_parquet(\"data/conf.parquet\")"
+      ],
+      "id": "08a31e45",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/home/alex/.local/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
